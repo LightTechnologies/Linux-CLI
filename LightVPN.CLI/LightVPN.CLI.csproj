@@ -5,4 +5,15 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LightVPN.CLI.Auth\LightVPN.CLI.Auth.csproj" />
+    <ProjectReference Include="..\LightVPN.CLI.Common\LightVPN.CLI.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LightVPN.Settings">
+      <HintPath>..\..\..\..\Documents\GitHub\Windows-App\LightVPN.Settings\bin\Release\net5.0-windows\LightVPN.Settings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
