@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,14 +10,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LightVPN.CLI.Auth\LightVPN.CLI.Auth.csproj" />
+    <PackageReference Include="SimpleInjector" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LightVPN.CLI.Common\LightVPN.CLI.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="LightVPN.Auth">
+      <HintPath>..\..\Windows-App\LightVPN.OpenVPN\bin\Release\net5.0\LightVPN.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="LightVPN.Common">
+      <HintPath>..\..\Windows-App\LightVPN.Auth\bin\Release\net5.0\LightVPN.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="LightVPN.FileLogger">
+      <HintPath>..\..\Windows-App\LightVPN.OpenVPN\bin\Release\net5.0\LightVPN.FileLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="LightVPN.OpenVPN">
+      <HintPath>..\..\Windows-App\LightVPN.OpenVPN\bin\Release\net5.0\LightVPN.OpenVPN.dll</HintPath>
+    </Reference>
     <Reference Include="LightVPN.Settings">
       <HintPath>..\..\..\..\Documents\GitHub\Windows-App\LightVPN.Settings\bin\Release\net5.0-windows\LightVPN.Settings.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
